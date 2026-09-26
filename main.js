@@ -11388,8 +11388,8 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         }
       ),
       /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(re2, { label: "Cardiolaudo Telemedicina", items: [{ src: wordmark_default, alt: "Logo da Cardiolaudo: tra\xE7ado de ECG vermelho que termina em um cora\xE7\xE3o, com o nome Cardiolaudo" }] }),
-      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(vu, { label: "Por que a Cardiolaudo", heading: true, children: /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(Mu, { children: [
-        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Assinado por especialista", detail: "Todos os exames s\xE3o analisados um a um por m\xE9dico cardiologista arritmologista com RQE, sem laudos autom\xE1ticos." }),
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(vu, { label: "Por que a Cardiolaudo?", heading: true, children: /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(Mu, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Laudado por especialista", detail: "Todos os exames s\xE3o analisados um a um por m\xE9dico cardiologista arritmologista com RQE, sem laudos autom\xE1ticos." }),
         /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Prazo previs\xEDvel", detail: "Laudo em at\xE9 24 horas em dias \xFAteis. Exames recebidos na sexta-feira s\xE3o entregues at\xE9 a segunda-feira pela manh\xE3." }),
         /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Sem deslocamento", detail: "Holter e MAPA trafegam pela CardioNet, a plataforma de telemedicina da Cardios. O ECG chega em PDF por e-mail." }),
         /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Laudo assinado e identificado", detail: "Cada laudo volta assinado, com nome, CRM e RQE do m\xE9dico respons\xE1vel." })
