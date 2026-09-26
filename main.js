@@ -11438,7 +11438,7 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
           /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Telemedicina", detail: "Fundador da Cardiolaudo Telemedicina, laudos cardiol\xF3gicos \xE0 dist\xE2ncia desde 2003." })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("div", { className: "cv-actions", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("a", { className: "cv-download", href: "curriculo-eduardo-emerick.pdf", download: "Curriculo-Dr-Eduardo-Emerick.pdf", children: "Baixar curr\xEDculo" }),
+          /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("a", { className: "cv-download", href: "curriculo-eduardo-emerick.pdf", target: "_blank", rel: "noopener noreferrer", children: "Ver curr\xEDculo" }),
           /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("a", { className: "cv-linkedin", href: "https://linkedin.com/in/eduemerick", target: "_blank", rel: "noopener noreferrer", children: "LinkedIn" })
         ] })
       ] }),
