@@ -11360,6 +11360,35 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
       raf = requestAnimationFrame(tick);
       return () => cancelAnimationFrame(raf);
     }, []);
+    (0, import_react18.useEffect)(() => {
+      const faqItems = [
+        { q: "Como funciona o laudo \xE0 dist\xE2ncia?", a: "S\xE3o tr\xEAs passos: sua cl\xEDnica realiza o exame, envia pela plataforma (Holter e MAPA) ou por e-mail em PDF (ECG) e recebe o laudo pronto." },
+        { q: "Quem assina os laudos?", a: "Dr. Eduardo Maximiano Emerick, cardiologista arritmologista, CRM RN 11767, RQE 4977/4978. Cada exame \xE9 analisado por m\xE9dico - nunca por laudo autom\xE1tico." },
+        { q: "Quais exames s\xE3o laudados?", a: "Holter 24 horas, MAPA e eletrocardiograma (ECG)." },
+        { q: "Qual \xE9 o prazo de entrega?", a: "At\xE9 24 horas em dias \xFAteis." },
+        { q: "Voc\xEAs atendem qualquer cidade?", a: "Sim. O servi\xE7o \xE9 100% \xE0 dist\xE2ncia e atende cl\xEDnicas, consult\xF3rios, hospitais e servi\xE7os de diagn\xF3stico em todo o Brasil." },
+        { q: "Como \xE9 o faturamento?", a: "Mensal, por planilha consolidada dos exames laudados, com pagamento at\xE9 o dia 10." },
+        { q: "Como come\xE7ar?", a: "Basta escrever para centralcardiolaudo@gmail.com." }
+      ];
+      const data2 = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqItems.map(({ q: q2, a }) => ({
+          "@type": "Question",
+          name: q2,
+          acceptedAnswer: { "@type": "Answer", text: a }
+        }))
+      };
+      const s = document.createElement("script");
+      s.type = "application/ld+json";
+      s.id = "faq-jsonld";
+      s.textContent = JSON.stringify(data2);
+      document.head.appendChild(s);
+      return () => {
+        const el2 = document.getElementById("faq-jsonld");
+        if (el2) el2.remove();
+      };
+    }, []);
     return /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { className: "page-wrap", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(wu, { children: [
       /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("svg", { className: "ecg-trace", viewBox: "0 0 300 168", "aria-hidden": "true", ref: svgRef, children: [
         /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("defs", { children: [
@@ -11399,6 +11428,9 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "MAPA", thumbnail: { src: exam_mapa_default, alt: "Ilustra\xE7\xE3o de paciente com bra\xE7adeira de MAPA no bra\xE7o ligada a um monitor na cintura" }, detail: "Monitoriza\xE7\xE3o ambulatorial da press\xE3o arterial ao longo de 24 horas, exame de refer\xEAncia para o diagn\xF3stico da hipertens\xE3o e o acompanhamento do tratamento." }),
         /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Eletrocardiograma (ECG)", thumbnail: { src: exam_ecg_default, alt: "Ilustra\xE7\xE3o de monitor exibindo um tra\xE7ado de ECG em vermelho" }, detail: "Registro da atividade el\xE9trica do cora\xE7\xE3o em repouso, usado em avalia\xE7\xF5es cl\xEDnicas, check-ups e exames ocupacionais. Enviado em PDF por e-mail, sem necessidade de aplicativo." })
       ] }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { id: "holter", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(vu, { label: "Laudo de Holter 24 horas \xE0 dist\xE2ncia", heading: true, children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Fu, { children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Ru, { children: "O Holter registra o ritmo card\xEDaco do paciente durante 24 horas (ou mais), no seu dia a dia. Na pr\xE1tica: sua cl\xEDnica realiza o exame com o seu pr\xF3prio gravador e envia o registro pela plataforma. Cada tra\xE7ado \xE9 analisado por cardiologista arritmologista - frequ\xEAncia m\xE1xima, m\xE9dia e m\xEDnima, arritmias, pausas, extrass\xEDstoles e correla\xE7\xE3o com os sintomas do paciente." }) }) }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { id: "mapa", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(vu, { label: "Laudo de MAPA \xE0 dist\xE2ncia", heading: true, children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Fu, { children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Ru, { children: "A MAPA (monitoriza\xE7\xE3o ambulatorial da press\xE3o arterial) acompanha a press\xE3o do paciente por 24 horas, incluindo durante o sono. Sua cl\xEDnica realiza e envia o exame pela plataforma; a an\xE1lise inclui m\xE9dias de 24h, vig\xEDlia e sono, descenso noturno, cargas press\xF3ricas e variabilidade - tudo avaliado por cardiologista." }) }) }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { id: "ecg", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(vu, { label: "Laudo de ECG \xE0 dist\xE2ncia", heading: true, children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Fu, { children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Ru, { children: "O eletrocardiograma de 12 deriva\xE7\xF5es \xE9 o exame mais comum da cardiologia - e um dos que mais exige leitura criteriosa. Sua cl\xEDnica envia o PDF do ECG para o nosso e-mail e recebe a an\xE1lise do mesmo (normal ou anormalidades), assinada por cardiologista com RQE." }) }) }) }),
       /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(vu, { label: "Como funciona", heading: true, children: [
         /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Fu, { children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Bu, { sub: "Sistema Cardios + CardioNet", children: "Holter e MAPA" }) }),
         /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Nu, { items: [
@@ -11443,6 +11475,15 @@ Please change the parent <Route path="${parentPath}"> to <Route path="${parentPa
         ] })
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(vu, { label: "Faturamento", heading: true, children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Fu, { children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Ru, { children: "Ao final de cada m\xEAs trabalhado, \xE9 emitida uma planilha com todos os exames laudados, enviada \xE0 cl\xEDnica de origem para confer\xEAncia e pagamento, que poder\xE1 ser feito at\xE9 o dia 10 do m\xEAs subsequente." }) }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("div", { id: "faq", children: /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(vu, { label: "Perguntas frequentes", heading: true, children: /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)(Mu, { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Como funciona o laudo \xE0 dist\xE2ncia?", detail: "S\xE3o tr\xEAs passos: sua cl\xEDnica realiza o exame, envia pela plataforma (Holter e MAPA) ou por e-mail em PDF (ECG) e recebe o laudo pronto." }),
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Quem assina os laudos?", detail: "Dr. Eduardo Maximiano Emerick, cardiologista arritmologista, CRM RN 11767, RQE 4977/4978. Cada exame \xE9 analisado por m\xE9dico - nunca por laudo autom\xE1tico." }),
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Quais exames s\xE3o laudados?", detail: "Holter 24 horas, MAPA e eletrocardiograma (ECG)." }),
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Qual \xE9 o prazo de entrega?", detail: "At\xE9 24 horas em dias \xFAteis." }),
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Voc\xEAs atendem qualquer cidade?", detail: "Sim. O servi\xE7o \xE9 100% \xE0 dist\xE2ncia e atende cl\xEDnicas, consult\xF3rios, hospitais e servi\xE7os de diagn\xF3stico em todo o Brasil." }),
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Como \xE9 o faturamento?", detail: "Mensal, por planilha consolidada dos exames laudados, com pagamento at\xE9 o dia 10." }),
+        /* @__PURE__ */ (0, import_jsx_runtime17.jsx)(Au, { name: "Como come\xE7ar?", detail: "Basta escrever para centralcardiolaudo@gmail.com." })
+      ] }) }) }),
       /* @__PURE__ */ (0, import_jsx_runtime17.jsxs)("p", { className: "closing-statement", children: [
         /* @__PURE__ */ (0, import_jsx_runtime17.jsx)("strong", { children: "Laudo \xE9 ato m\xE9dico." }),
         " Na Cardiolaudo, cada exame \xE9 lido tra\xE7ado a tra\xE7ado por cardiologista e arritmologista com RQE, sem laudos autom\xE1ticos nem intermedi\xE1rios."
